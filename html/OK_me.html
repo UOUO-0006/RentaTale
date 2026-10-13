@@ -91,13 +91,18 @@ gap:10px;
 .rt-row[data-cols="6"] > img{flex-basis:calc((100% - 5*var(--rt-row-gap,10px))/6);}
 .rt-row[data-nowrap="1"]{flex-wrap:nowrap;}
 .rt-video iframe{width:100%;max-width:none;height:auto;margin:0;aspect-ratio:16/9;border:var(--rt-video-border,1px solid #333);border-radius:4px;display:block;background:#111;}
-.rt-link{color:rgb(50, 117, 198);font-size:24px;text-decoration:underline;line-height:1.4;cursor:pointer;display:inline-block;margin:12px 0;}
-.rt-link:visited{color:rgb(50, 117, 198);}
+.rt-link{color:#9ecbff;font-size:24px;text-decoration:underline;line-height:1.4;cursor:pointer;display:inline-block;margin:12px 0;}
+.rt-link:visited{color:#9ecbff;}
 .rt-link:hover{opacity:0.8;}
-a.rt-tlink{color:rgb(50, 117, 198);text-decoration:underline;cursor:pointer;}
-a.rt-tlink:visited{color:rgb(50, 117, 198);}
+a.rt-tlink{color:#9ecbff;text-decoration:underline;cursor:pointer;}
+a.rt-tlink:visited{color:#9ecbff;}
 a.rt-tlink:hover{opacity:0.8;}
 @media screen and (max-width:600px){.rt-audio .f{width:30px;}.rt-audio .sk{min-width:70px;}}
+@media screen and (max-width:600px){
+.rt-img{max-width:100%;}
+.rt-row:not([data-sm-same]){width:100% !important;}
+.rt-row[data-cols="3"] > img,.rt-row[data-cols="4"] > img,.rt-row[data-cols="5"] > img,.rt-row[data-cols="6"] > img{flex-basis:calc((100% - var(--rt-row-gap,10px))/2);}
+}
 </style>
 </head>
 <body>
@@ -106,26 +111,26 @@ a.rt-tlink:hover{opacity:0.8;}
 <div class="t">
 <p style="font-size:40px;margin-bottom:-15px">Tr.02 saaa feat.重音テトSV - 目を見て</p>
 </div>
-<p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.8">制作期間：2025/08/17 ～ 2025/09/19　BPM:140<br><br></p>
+<p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.8">制作期間：2025/08/17 ～ 2025/09/19<br>Genre: Bass House　BPM:140<br><br></p>
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">無色透名祭3の出展曲。一年以上前で横転<br><br>当時は筆が相当遅くてかなりギリギリだったため、だいぶシンプルな構成の曲になりました<br>でもそれが良い方向に転がったように感じる……<br>今までのsaaaボカロ曲の中でも特に&quot;ボカロ曲らしい&quot;雰囲気が出ました<br><br></p>
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">制作途中の状態のものが見つかったので、ここにいるみなさんにだけ見せてあげちゃう<br>（歌詞が未定の箇所はランダムな英語怪文書を喋らせている）<br></p>
-<div class="rt-audio">
+<div class="rt-audio" data-norm="-5">
 <div class="b" role="button" aria-label="再生/停止"><svg class="e" viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg><svg class="h" viewBox="0 0 24 24"><rect x="5" y="3" width="5" height="18"/><rect x="14" y="3" width="5" height="18"/></svg></div>
 <div class="w" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></div>
-<input class="f" type="range" min="0" max="100" value="25" title="音量">
+<input class="f" type="range" min="0" max="100" value="50" title="音量">
 <input class="f sk" type="range" min="0" max="100" value="0" step="0.1" title="再生位置">
 <audio preload="metadata" src="../midi/me_p1.mp3"></audio>
 </div>
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">制作中は低めのキーで進めてたんですよね～実は<br>このキーがテトさんの得意音域じゃなさそう + 完成品、某某某某某曲に雰囲気似てない……？<br>という判断で、投稿数日前に急遽全部キー変え作業が挟まり、現状に至る</p>
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2;padding-top:5px"><br>MV制作予定なのですが時間が取れず、出るまでまだかかりそうです！！<br>お詫びにイラストたちを放流……</p>
-<div class="rt-row" data-cols="5" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;--rt-row-gap:10px;width:50%;max-width:800px;margin:16px auto;box-sizing:border-box">
+<div class="rt-row" data-cols="5" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;--rt-row-gap:10px;width:90%;max-width:80%;margin:16px auto;box-sizing:border-box">
 <img class="rt-img" src="../image/me_p6.png" alt="">
 <img class="rt-img" src="../image/me_p1.png" alt="">
-<img class="rt-img" src="../image/me_p2.png" alt="" style="width:80%;max-height:80%">
+<img class="rt-img" src="../image/me_p2.png" alt="" style="height:auto;height:auto;height:auto;height:auto;width:80%;height:auto;max-height:none">
 <img class="rt-img" src="../image/me_p4.png" alt="">
 <img class="rt-img" src="../image/me_p3.png" alt="">
 </div>
-<img class="rt-img" src="../image/me_p5.png" alt="" style="width:20%">
+<img class="rt-img" src="../image/me_p5.png" alt="" style="height:auto;height:auto;height:auto;height:auto;width:300px;height:auto;max-height:none">
 <div class="c">
 <img src="../image/return.png" alt="" id="r" style="cursor:pointer;">
 </div>
@@ -151,11 +156,13 @@ if(window.__rtRuntime&&window.__rtRuntime.init){window.__rtRuntime.init();return
 function boxes(){return Array.prototype.slice.call(document.querySelectorAll('.rt-audio'));}
 function au(box){return box.querySelector('audio');}
 function bt(box){return box.querySelector('.b');}
+function gainOf(box){var v=parseFloat(box.getAttribute('data-norm'));return isFinite(v)?Math.pow(10,v/20):1;}
+function av(box,base){var g=base*gainOf(box);if(!isFinite(g)||g<0)g=0;if(g>1)g=1;return g;}
 function init(){boxes().forEach(function(box){
 var a=au(box);if(!a)return;
 var vol=box.querySelector('.f:not(.sk)');
 var sk=box.querySelector('.sk');
-a.volume=vol?vol.value/100:0.5;
+a.volume=av(box,vol?vol.value/100:0.5);
 if(sk){
 sk.disabled=true;
 a.addEventListener('loadedmetadata',function(){
@@ -187,7 +194,7 @@ var a=au(box);if(!a)return;
 if(t.classList.contains('sk')){
 if(a.duration&&isFinite(a.duration)){try{a.currentTime=parseFloat(t.value)||0;}catch(err){}}
 }else if(t.classList.contains('f')){
-a.volume=t.value/100;
+a.volume=av(box,parseFloat(t.value)/100);
 }
 });
 window.__rtRuntime={init:init};
