@@ -51,7 +51,8 @@ line-height: 1.8;
 margin: 0.3em 0;
 }
 .c {
-margin-top: 40px;
+position: static;
+margin-top: auto; padding-top: 28px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -192,6 +193,28 @@ var z=e.touches[0].clientY;
 d(y-z);
 y=z;
 },{passive:true});
+var w=document.querySelector(".c");
+var v=document.createElement("div");
+v.style.cssText="position:absolute;top:0;left:0;width:0;height:100vh;visibility:hidden;";
+document.body.appendChild(v);
+function z(){
+if(!w){return;}
+w.style.marginTop="0px";
+var s=w.previousElementSibling;
+var e=s?s.getBoundingClientRect().bottom+(window.pageYOffset||0):0;
+var h=w.getBoundingClientRect().height;
+var y=v.getBoundingClientRect().height-20-h-e;
+w.style.marginTop=(y>0?Math.round(y):0)+"px";
+}
+z();
+window.addEventListener("load",z);
+window.addEventListener("resize",z);
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(z);}
+if(window.ResizeObserver){
+var o=new ResizeObserver(z);
+var q=w.previousElementSibling;
+while(q){o.observe(q);q=q.previousElementSibling;}
+}
 </script>
 <script>
 document.addEventListener("keydown",function(e){
