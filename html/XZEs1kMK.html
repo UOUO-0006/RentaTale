@@ -12,61 +12,42 @@ src:url('../x12y16pxMaruMonica.ttf') format('truetype');
 }
 * {
 font-family:'MaruMonica', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 body {
 background-color:#000000;
-color:#ffffff;
-margin:0;
-padding:20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
 min-height:100vh;
-box-sizing: border-box;
-position: relative;
-}
-img {
-max-width:90%;
-height: auto;
-max-height:30vh;
-margin-top:20px;
-display: block;
-}
-.c {
-position: absolute;
-top:65vh;
 display: flex;
-flex-direction: column;
 align-items: center;
-gap:10px;
+justify-content: center;
 }
-a {
-color:rgb(50, 117, 198);
-font-size:3rem;
-text-decoration: underline;
-line-height:1;
-cursor: pointer;
-}
-a:visited {
-color:rgb(50, 117, 198);
-}
-a:hover {
-opacity:0.8;
+.q {
+max-width: 80%;
+max-height: 80vh;
 }
 </style>
 </head>
 <body>
-<img src="../image/index.png" alt="">
-<img src="../image/door.png" alt="">
-<div class="c">
-<a id="l">■</a>
-</div>
+<img src="../image/H5j9L2ND.png" alt="" id="q" class="q">
 <script>
 document.title="\u2800";
-const p="bWFpbjIuaHRtbA==";
-document.getElementById("l").addEventListener("click",function(){
-window.location.href=atob(p);
+var cc=0;
+var triggered=false;
+function trigger(){
+if(triggered)return;
+triggered=true;
+var q=document.getElementById("q");
+q.src="../image/9p384uhnfqo98gnqy0954gq.png";
+setTimeout(function(){
+window.location.href="njha54IP.html";
+},3000);
+}
+setTimeout(trigger,10000);
+document.addEventListener("click",function(){
+cc++;
+if(cc>=3)trigger();
 });
 </script>
 <script>

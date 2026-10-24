@@ -99,21 +99,91 @@ a.rt-tlink:hover{opacity:0.8;}
 </style>
 </head>
 <body>
-<img src="../image/OK_ninV.png" alt="">
+<img src="../image/OK_TT.png" alt="" id="i" style="-webkit-tap-highlight-color:transparent;">
 <div class="t">
-<p style="color:#afcfda">「道端にふとんがあっちゃいけないだろ」</p>
-<p style="color:#afcfda">「……」</p>
-<p style="color:#afcfda">「5分だけ…」</p>
+<p>TT</p>
 </div>
 <div class="c">
 <img src="../image/return.png" alt="" id="r" style="cursor:pointer;">
 </div>
 <script>
 document.title="\u2800";
-var p="bWFpbjIuaHRtbA==";
 document.getElementById("r").addEventListener("click",function(){
-window.location.href=atob(p);
+window.location.href="6MM4uEAN.html";
 });
+</script>
+<script>
+(function(){
+var i=document.getElementById("i");
+var a="../image/OK_TT.png";
+var b="../image/OK_TT_.png";
+var x0=190/256;
+var x1=231/256;
+var y0=230/256;
+var y1=252/256;
+var n=new Image();
+n.src=b;
+var u=false;
+var s=false;
+function h(c,d){
+var r=i.getBoundingClientRect();
+if(!r.width||!r.height){return false;}
+var x=(c-r.left)/r.width;
+var y=(d-r.top)/r.height;
+return x>=x0&&x<x1&&y>=y0&&y<y1;
+}
+function j(){
+window.location.href="JEW8LbTi.html";
+}
+if(window.matchMedia&&window.matchMedia("(hover: hover) and (pointer: fine)").matches){
+i.addEventListener("mousemove",function(e){
+var v=h(e.clientX,e.clientY);
+if(v!==u){
+u=v;
+i.src=v?b:a;
+}
+});
+i.addEventListener("mouseleave",function(){
+if(u){
+u=false;
+i.src=a;
+}
+});
+i.addEventListener("click",function(e){
+if(u&&h(e.clientX,e.clientY)){
+j();
+}
+});
+}else{
+i.addEventListener("touchstart",function(e){
+if(e.touches.length!==1){return;}
+var t=e.touches[0];
+u=true;
+i.src=b;
+s=h(t.clientX,t.clientY);
+},{passive:true});
+i.addEventListener("touchend",function(e){
+var t=e.changedTouches[0];
+var v=s&&!!t&&h(t.clientX,t.clientY);
+s=false;
+if(v){
+j();
+return;
+}
+if(u){
+u=false;
+i.src=a;
+}
+},{passive:true});
+i.addEventListener("touchcancel",function(){
+s=false;
+if(u){
+u=false;
+i.src=a;
+}
+},{passive:true});
+}
+})();
 </script>
 <script>
 document.addEventListener("keydown",function(e){

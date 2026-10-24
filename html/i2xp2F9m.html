@@ -13,16 +13,24 @@ src:url('../x12y16pxMaruMonica.ttf') format('truetype');
 * {
 font-family:'MaruMonica', sans-serif;
 }
+html {
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+display: none;
+}
 body {
 background-color:#000000;
 color:#ffffff;
 margin:0;
 padding:20px;
+padding-bottom: calc(150vh + 20px);
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: flex-start;
-min-height:100vh;
+min-height:250vh;
 box-sizing: border-box;
 position: relative;
 }
@@ -50,6 +58,18 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap:10px;
+}
+.k {
+position: absolute;
+bottom: 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.k img {
+max-width: 120px;
+max-height: 120px;
+cursor: pointer;
 }
 </style>
 <style>
@@ -99,20 +119,23 @@ a.rt-tlink:hover{opacity:0.8;}
 </style>
 </head>
 <body>
-<img src="../image/OK_osetuma.png" alt="">
+<img src="../image/OK_ddbbs.png" alt="">
 <div class="t">
-<p style="color:#afcfda">「なんもねえなこの部屋、椅子と机だけ？」</p>
-<p style="color:#b3b3b3">「このポテチ見覚えあると思ったら、ユウがよく買ってるやつだ」</p>
-<p style="color:#afcfda">「用意良すぎて気持ち悪い…ちょっと袋開いてるし」</p>
+<p style="color:#fdff85">『あの空間に遭遇するのに地域は問わないらしい。地上でも同様の報告がなされていたとの情報がある。』<br>『どの報告でも、我々が観測した例と特徴が一致している。』<br>『少し馬鹿げているが、あの空間内でネットに接続を試みたらどうなるだろうか？』</p>
 </div>
 <div class="c">
 <img src="../image/return.png" alt="" id="r" style="cursor:pointer;">
 </div>
+<div class="k">
+<img src="../image/ie.png" alt="" id="ie">
+</div>
 <script>
 document.title="\u2800";
-var p="bWFpbjIuaHRtbA==";
 document.getElementById("r").addEventListener("click",function(){
-window.location.href=atob(p);
+window.location.href="6MM4uEAN.html";
+});
+document.getElementById("ie").addEventListener("click",function(){
+window.location.href="EoCY4PDo.html";
 });
 </script>
 <script>
