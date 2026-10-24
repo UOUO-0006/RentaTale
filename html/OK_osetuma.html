@@ -58,7 +58,6 @@ flex-direction: column;
 align-items: center;
 gap:10px;
 }
-.x{color:#fdff85;}
 </style>
 <style>
 .c{position:static;top:auto;left:auto;right:auto;bottom:auto;transform:none;margin-top:auto;padding-top:28px;}
@@ -110,8 +109,7 @@ a.rt-tlink:hover{opacity:0.8;}
 <div class="t">
 <p style="font-size:40px;margin-bottom:-15px">Tr.06 saaa feat.初音ミク -  応接間</p>
 </div>
-<p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.5">制作期間：2026/01/27 ～ 2026/03/01　<br>Genre: Hardstyle / Botanica　BPM:160<br></p>
-<p id="q" style="margin:0.3em 0;font-size:12px;color:#000000;text-align:center;line-height:1.5">『あの空間について判明していることは以下の通り。「夢の中でのみ潜入可能で、入る瞬間を知覚できない」「空間内に自分がもう一人いる」「その人物は自分の知らない知識を持っている」』</p>
+<p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.5">制作期間：2026/01/27 ～ 2026/03/01　<br>Genre: Hardstyle / Botanica　BPM:160<br><br></p>
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">今回デザイン担当してくれたKeiuOさん主催コンピ<a class="rt-tlink" href="https://relattice.tumblr.com/" target="_blank" rel="noopener noreferrer">『Relattice』</a>から許可をいただいて収録！ありがとう……<br><br>Hardstyleの先入観からかけ離れた楽曲となっております<br>Botanica要素が混じってたり、ポップス的な転調をしたり、めちゃくちゃストーリー重視だったり……<br><br>ストーリー重視楽曲とHardstyle含むHard系ジャンルって結構相性悪いと思うんですよ（唐突）<br>音から連想されるイメージが「暴！！！！！」「アガるぜ～～～」みたいな感じなので、<br>それ以外の話を持ち込みたいときに非常に悩むのです<br>こういう時は、自分で道を開拓しましょう　先入観無視してやりたいことやりました<br>自分が拓いたものが受け入れられると、うれしいから……<br><br></p>
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">この場に居合わせたHard楽曲作ってるみなさんへ<br>Euphoric要素のあるキックにはChromaなどでを薄っすらColourにしてあげると、そこそこスッキリする</p>
 <img class="rt-img" src="../image/osetuma_p1.png" alt="" style="height:auto;width:400px;height:auto;max-height:none">
@@ -130,61 +128,8 @@ a.rt-tlink:hover{opacity:0.8;}
 <script>
 document.title="\u2800";
 var p="bWFpbi5odG1s";
-var u="bWFpbjIuaHRtbA==";
-var q=document.getElementById("q");
-var t=q.textContent;
-var i;
-q.textContent="";
-for(i=0;i<t.length;i++){
-var s=document.createElement("span");
-s.textContent=t.charAt(i);
-s.style.color="#000000";
-q.appendChild(s);
-}
-function ix(r,el){
-if(r.intersectsNode)return r.intersectsNode(el);
-var a=document.createRange();
-a.selectNode(el);
-return r.compareBoundaryPoints(Range.END_TO_START,a)===-1&&r.compareBoundaryPoints(Range.START_TO_END,a)===1;
-}
-function mk(){
-var sel=window.getSelection();
-if(!sel||sel.isCollapsed||!sel.rangeCount)return;
-var r=sel.getRangeAt(0);
-var n=q.querySelectorAll("span");
-var c=0;
-for(var j=0;j<n.length;j++){
-if(ix(r,n[j])){
-if(n[j].className!=="x"){
-n[j].className="x";
-n[j].style.color="#fdff85";
-c=1;
-}
-}
-}
-
-}
-document.addEventListener("selectionchange",mk);
-document.addEventListener("mouseup",mk);
-document.addEventListener("touchend",mk);
-function rr(){
-var n=q.querySelectorAll("span");
-for(var j=0;j<n.length;j++){
-n[j].className="";
-n[j].style.color="#000000";
-}
-var s=window.getSelection();
-if(s)s.removeAllRanges();
-}
-window.addEventListener("pagehide",rr);
-window.addEventListener("pageshow",function(e){if(e.persisted)rr();});
 document.getElementById("r").addEventListener("click",function(){
-var n=q.querySelectorAll("span");
-var o=n.length?1:0;
-for(var j=0;j<n.length;j++){
-if(n[j].className!=="x")o=0;
-}
-window.location.href=atob(o?u:p);
+window.location.href=atob(p);
 });
 </script>
 <script>
