@@ -81,13 +81,14 @@ gap:10px;
 .rt-audio .sk:disabled{opacity:0.35;cursor:default;}
 .rt-video{width:90%;max-width:640px;margin:16px auto;}
 .rt-row{box-sizing:border-box;}
-.rt-row > img{margin:0;height:auto;max-width:100%;}
-.rt-row[data-cols] > img{flex:0 1 0;min-width:0;width:auto;max-height:45vh;object-fit:contain;}
-.rt-row[data-cols="2"] > img{flex-basis:calc((100% - 1*var(--rt-row-gap,10px))/2);}
-.rt-row[data-cols="3"] > img{flex-basis:calc((100% - 2*var(--rt-row-gap,10px))/3);}
-.rt-row[data-cols="4"] > img{flex-basis:calc((100% - 3*var(--rt-row-gap,10px))/4);}
-.rt-row[data-cols="5"] > img{flex-basis:calc((100% - 4*var(--rt-row-gap,10px))/5);}
-.rt-row[data-cols="6"] > img{flex-basis:calc((100% - 5*var(--rt-row-gap,10px))/6);}
+.rt-row > img, .rt-row > video{margin:0;height:auto;max-width:100%;}
+.rt-row[data-cols] > img, .rt-row[data-cols] > video{flex:0 1 0;min-width:0;width:auto;max-height:45vh;object-fit:contain;}
+.rt-vid{display:block;background:#000;}
+.rt-row[data-cols="2"] > img, .rt-row[data-cols="2"] > video{flex-basis:calc((100% - 1*var(--rt-row-gap,10px))/2);}
+.rt-row[data-cols="3"] > img, .rt-row[data-cols="3"] > video{flex-basis:calc((100% - 2*var(--rt-row-gap,10px))/3);}
+.rt-row[data-cols="4"] > img, .rt-row[data-cols="4"] > video{flex-basis:calc((100% - 3*var(--rt-row-gap,10px))/4);}
+.rt-row[data-cols="5"] > img, .rt-row[data-cols="5"] > video{flex-basis:calc((100% - 4*var(--rt-row-gap,10px))/5);}
+.rt-row[data-cols="6"] > img, .rt-row[data-cols="6"] > video{flex-basis:calc((100% - 5*var(--rt-row-gap,10px))/6);}
 .rt-row[data-nowrap="1"]{flex-wrap:nowrap;}
 .rt-video iframe{width:100%;max-width:none;height:auto;margin:0;aspect-ratio:16/9;border:var(--rt-video-border,1px solid #333);border-radius:4px;display:block;background:#111;}
 .rt-link{color:#9ecbff;font-size:24px;text-decoration:underline;line-height:1.4;cursor:pointer;display:inline-block;margin:12px 0;}
@@ -100,7 +101,7 @@ a.rt-tlink:hover{opacity:0.8;}
 @media screen and (max-width:600px){
 .rt-img{max-width:100%;}
 .rt-row:not([data-sm-same]){width:100% !important;}
-.rt-row[data-cols="3"] > img,.rt-row[data-cols="4"] > img,.rt-row[data-cols="5"] > img,.rt-row[data-cols="6"] > img{flex-basis:calc((100% - var(--rt-row-gap,10px))/2);}
+.rt-row[data-cols="3"] > img,.rt-row[data-cols="4"] > img,.rt-row[data-cols="5"] > img,.rt-row[data-cols="6"] > img,.rt-row[data-cols="3"] > video,.rt-row[data-cols="4"] > video,.rt-row[data-cols="5"] > video,.rt-row[data-cols="6"] > video{flex-basis:calc((100% - var(--rt-row-gap,10px))/2);}
 }
 </style>
 </head>
@@ -112,7 +113,7 @@ a.rt-tlink:hover{opacity:0.8;}
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.5">制作期間：2026/05/19 ～ 2026/06/19　<br>Genre: J-Core / Rawstyle　BPM:168<br><br></p>
 <p style="margin:0.3em 0;font-size:24px;color:#ffffff;text-align:center;line-height:1.2">本アルバム屈指の正統派楽曲（当社比）です！！！<br><br>この曲に関してはあまりボツ等が無くて特別に見せられる音源が特にない…………<br>なので技術的な楽曲解説をしちゃおうかな！！！！<br><br></p>
 <p style="font-size:20px;text-align:center;line-height:1.2;margin-bottom:-15px">ﾏﾆ…</p>
-<img class="rt-img" src="../image/beam_p2.png" alt="" style="height:300px;height:300px;height:300px;width:auto;max-height:none">
+<img class="rt-img" src="../image/beam_p2.png" alt="" style="height:300px;height:300px;height:300px;width:auto;height:auto;max-height:none">
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">ボーカルにはManipulator（ボコーダー）を挿してChordのコーラスさせてあげましょうね<br>華やかさがだ～いぶ変わるから………</p>
 <div class="rt-audio">
 <div class="b" role="button" aria-label="再生/停止"><svg class="e" viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg><svg class="h" viewBox="0 0 24 24"><rect x="5" y="3" width="5" height="18"/><rect x="14" y="3" width="5" height="18"/></svg></div>
@@ -138,8 +139,8 @@ a.rt-tlink:hover{opacity:0.8;}
 <input class="f sk" type="range" min="0" max="100" value="0" step="0.1" title="再生位置">
 <audio preload="metadata" src="../midi/beam_p3.mp3"></audio>
 </div>
-<p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">ラストはベースの動くUptempo kick (Bounce) でシメ<br></p>
-<img class="rt-img" src="../image/beam_p3.png" alt="" style="height:auto;width:400px;height:auto;max-height:none;margin-top:0">
+<p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">ラストはベースの動くUptempo kick (Bounce) でシメ<br>このパート、本アルバムの中で一番気に入っている</p>
+<img class="rt-img" src="../image/beam_p3.png" alt="" style="height:auto;height:auto;width:400px;height:auto;max-height:none;margin-top:0">
 <div class="rt-audio">
 <div class="b" role="button" aria-label="再生/停止"><svg class="e" viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg><svg class="h" viewBox="0 0 24 24"><rect x="5" y="3" width="5" height="18"/><rect x="14" y="3" width="5" height="18"/></svg></div>
 <div class="w" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></div>
@@ -148,7 +149,7 @@ a.rt-tlink:hover{opacity:0.8;}
 <audio preload="metadata" src="../midi/beam_p4.mp3"></audio>
 </div>
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">こういうキックはアホのQで過剰ブーストするのが定石なのですが、<br>ブーストする帯域をキーに対するトニックに合わせると<br>ベースが動いても濁りが少なくなる気がする！！<br>この曲はFmなので、F4≒350Hz</p>
-<img class="rt-img" src="../image/beam_p4.png" alt="" style="height:auto;width:400px;height:auto;max-height:none;margin-top:0">
+<img class="rt-img" src="../image/beam_p4.png" alt="" style="height:auto;height:auto;width:400px;height:auto;max-height:none;margin-top:0">
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">　<br><br></p>
 <img class="rt-img" src="../image/beam_p1.png" alt="">
 <p style="margin:0.3em 0;font-size:24px;text-align:center;line-height:1.2">マジでずっと曲名だけ浮かばなかった　決まったのは10月入ってからでした</p>
